@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,200 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1.png" translatesAutoresizingMaskIntoConstraints="NO" id="36p-A9-57b">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-2O-zzK">
+                                <rect key="frame" x="0.0" y="535" width="600" height="65"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="K3r-HB-3nW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="37"/>
+                                <state key="normal" title="Inspire Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inspireMeDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKY-d5-viS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[quote here]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJb-Tx-fQC">
+                                <rect key="frame" x="16" y="28" width="568" height="477"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeA-Sj-bhy">
+                                <rect key="frame" x="523" y="445" width="61" height="60"/>
+                                <state key="normal" image="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ShareOnTwitterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuS-ML-2Xj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-SR-EzA">
+                                <rect key="frame" x="16" y="20" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GHB-zI-KBs" kind="show" id="GbT-gJ-yIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lJb-Tx-fQC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="C5i-cg-Pe6"/>
+                            <constraint firstItem="36p-A9-57b" firstAttribute="trailing" secondItem="7DZ-2O-zzK" secondAttribute="trailing" id="GM4-Pm-hX8"/>
+                            <constraint firstItem="7DZ-2O-zzK" firstAttribute="centerX" secondItem="lJb-Tx-fQC" secondAttribute="centerX" id="HYd-Ye-7nP"/>
+                            <constraint firstItem="7DZ-2O-zzK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="MO6-di-aWw"/>
+                            <constraint firstItem="36p-A9-57b" firstAttribute="leading" secondItem="7DZ-2O-zzK" secondAttribute="leading" id="TmG-pI-MbU"/>
+                            <constraint firstItem="KFW-SR-EzA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="b7M-aV-ych"/>
+                            <constraint firstItem="36p-A9-57b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gFH-hU-Ki6"/>
+                            <constraint firstItem="7DZ-2O-zzK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kyh-QT-NpT"/>
+                            <constraint firstItem="eeA-Sj-bhy" firstAttribute="bottom" secondItem="lJb-Tx-fQC" secondAttribute="bottom" id="nos-Ai-pEy"/>
+                            <constraint firstItem="KFW-SR-EzA" firstAttribute="leading" secondItem="lJb-Tx-fQC" secondAttribute="leading" id="q2Z-CE-s2z"/>
+                            <constraint firstItem="7DZ-2O-zzK" firstAttribute="top" secondItem="lJb-Tx-fQC" secondAttribute="bottom" constant="30" id="rpD-Kj-yDO"/>
+                            <constraint firstAttribute="trailing" secondItem="36p-A9-57b" secondAttribute="trailing" id="sWH-ED-Cij"/>
+                            <constraint firstItem="eeA-Sj-bhy" firstAttribute="trailing" secondItem="lJb-Tx-fQC" secondAttribute="trailing" id="xVV-ct-KrV"/>
+                            <constraint firstItem="lJb-Tx-fQC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yyq-7l-2OL"/>
+                            <constraint firstItem="36p-A9-57b" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zdu-u3-7YS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="36p-A9-57b" id="nNS-yv-eTI"/>
+                        <outlet property="quoteLabel" destination="lJb-Tx-fQC" id="gsf-Yt-qqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="7BK-eI-Dvh">
+            <objects>
+                <viewController id="GHB-zI-KBs" customClass="InfoViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLt-hV-acx"/>
+                        <viewControllerLayoutGuide type="bottom" id="lJz-tI-B6b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Pn-R5-Rqb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jS-Zl-pWR">
+                                <rect key="frame" x="16" y="20" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ACr-Fi-4tt"/>
+                                    <constraint firstAttribute="width" constant="45" id="lHJ-Ic-Saa"/>
+                                </constraints>
+                                <state key="normal" image="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="KCX-lO-rAh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brian" translatesAutoresizingMaskIntoConstraints="NO" id="QXG-6c-oRp">
+                                <rect key="frame" x="235" y="95" width="131" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QXG-6c-oRp" secondAttribute="height" multiplier="131:128" id="wGq-2J-emR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian Ramirez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-e7-323">
+                                <rect key="frame" x="247" y="238" width="107" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="NMv-Wx-kE2"/>
+                                    <constraint firstAttribute="width" constant="107" id="pao-1o-e41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDG-wU-Q2Y">
+                                <rect key="frame" x="243" y="263" width="115" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="1bY-gW-PcW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CQ-td-gWf">
+                                <rect key="frame" x="273" y="28" width="55" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="UOs-E7-qO3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mg-xe-Bu6">
+                                <rect key="frame" x="16" y="295" width="568" height="305"/>
+                                <mutableString key="text">Hello! My name is Brian Ramirez and I am an IOS Developer. I created this app as a simple project to practice my iOS Development skills. InspireMe provides you with a large variety of  beautiful HD images as a background and endless quotes to inspire you everyday. Also you can share those quotes on twitter and Facebook. 
+
+This app was created during the summer of 2015 during MakeSchool Summer Academy 
+
+Credits:
+
+All the images on this app come from the following websites:
+http://www.splitshire.com/
+http://isorepublic.com/
+https://pixabay.com/
+http://photopin.com/
+(All the images are licensed under the Creative Commons License)
+
+All quotes on this app come from the following websites:
+http://www.goodreads.com/quotes
+http://www.brainyquote.com/
+
+Icons provided by:
+Alessio Atzeni from www.flaticon.com CC BY 3.0
+
+Thanks for downloading!!</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5gn-e7-323" firstAttribute="centerX" secondItem="hDG-wU-Q2Y" secondAttribute="centerX" id="3c5-2M-IYX"/>
+                            <constraint firstItem="1jS-Zl-pWR" firstAttribute="leading" secondItem="2Pn-R5-Rqb" secondAttribute="leadingMargin" id="BZ3-AO-tVe"/>
+                            <constraint firstItem="QXG-6c-oRp" firstAttribute="centerX" secondItem="4Mg-xe-Bu6" secondAttribute="centerX" id="DA9-an-IQa"/>
+                            <constraint firstItem="5gn-e7-323" firstAttribute="centerX" secondItem="QXG-6c-oRp" secondAttribute="centerX" id="E33-ko-Nvi"/>
+                            <constraint firstItem="0CQ-td-gWf" firstAttribute="centerX" secondItem="QXG-6c-oRp" secondAttribute="centerX" id="RN4-gb-RYQ"/>
+                            <constraint firstItem="5gn-e7-323" firstAttribute="top" secondItem="QXG-6c-oRp" secondAttribute="bottom" constant="15" id="S3g-89-kM8"/>
+                            <constraint firstItem="4Mg-xe-Bu6" firstAttribute="top" secondItem="QXG-6c-oRp" secondAttribute="bottom" constant="72" id="Tm3-qq-5zQ"/>
+                            <constraint firstItem="4Mg-xe-Bu6" firstAttribute="trailing" secondItem="2Pn-R5-Rqb" secondAttribute="trailingMargin" id="ZLi-wW-Pih"/>
+                            <constraint firstItem="0CQ-td-gWf" firstAttribute="top" secondItem="aLt-hV-acx" secondAttribute="bottom" constant="8" symbolic="YES" id="agz-si-udD"/>
+                            <constraint firstItem="hDG-wU-Q2Y" firstAttribute="top" secondItem="5gn-e7-323" secondAttribute="bottom" constant="1" id="dti-DU-GMA"/>
+                            <constraint firstItem="4Mg-xe-Bu6" firstAttribute="top" secondItem="2Pn-R5-Rqb" secondAttribute="top" constant="295" id="eAr-Ri-yX0"/>
+                            <constraint firstItem="1jS-Zl-pWR" firstAttribute="top" secondItem="aLt-hV-acx" secondAttribute="bottom" id="efK-cJ-Ml7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4Mg-xe-Bu6" secondAttribute="bottom" id="gA3-VB-i69"/>
+                            <constraint firstItem="QXG-6c-oRp" firstAttribute="top" secondItem="aLt-hV-acx" secondAttribute="bottom" constant="75" id="keg-yg-dAU"/>
+                            <constraint firstItem="4Mg-xe-Bu6" firstAttribute="top" secondItem="hDG-wU-Q2Y" secondAttribute="bottom" constant="8" symbolic="YES" id="tEK-qn-3so"/>
+                            <constraint firstItem="4Mg-xe-Bu6" firstAttribute="leading" secondItem="1jS-Zl-pWR" secondAttribute="leading" id="zf6-Zq-Jmv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="QXG-6c-oRp" id="upK-uW-3Uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlL-vK-3ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="-447"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Twitter" width="61" height="60"/>
+        <image name="back" width="86" height="86"/>
+        <image name="brian" width="640" height="640"/>
+        <image name="image1.png" width="879" height="1054"/>
+    </resources>
 </document>
